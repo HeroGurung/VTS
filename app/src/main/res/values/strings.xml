@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Virtual Training Services</string>
+    <string name="login">Login</string>
+    <string name="enter_password">ENTER PASSWORD</string>
+    <string name="enter_username">ENTER USERNAME</string>
+    <string name="logo">Logo</string>
+    <string name="VTS">Virtual Training Services</string>
+
+<!--naya login -->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_having_account">Already Having an Account?</string>
+    <string name="log_in">Log In</string>
+    <string name="not_having_account">Not Having an Account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logout">Logout</string>
+</resources>
