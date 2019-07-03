@@ -17,7 +17,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity
+{
     private static final String KEY_STATUS = "status";
     private static final String KEY_MESSAGE = "message";
     private static final String KEY_FULL_NAME = "full_name";
@@ -31,9 +32,9 @@ public class RegisterActivity extends AppCompatActivity {
     private String username;
     private String password;
     private String confirmPassword;
-    private String fullName;
+    private String full_name;
     private ProgressDialog pDialog;
-    public String register_url = "http://192.168.1.16/project/member/db/register.php";
+    public String register_url = "http://192.168.1.79/project/member/db/register.php";
     private SessionHandler session;
 
     @Override
@@ -50,7 +51,6 @@ public class RegisterActivity extends AppCompatActivity {
         Button login = findViewById(R.id.btnRegisterLogin);
         Button register = findViewById(R.id.btnRegister);
 //      Button Uri = findViewById(R.id.btnRegister);
-
 
         //Launch Login screen when Login Button is clicked
         login.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
                 username = etUsername.getText().toString().toLowerCase().trim();
                 password = etPassword.getText().toString().trim();
                 confirmPassword = etConfirmPassword.getText().toString().trim();
-                fullName = etFullName.getText().toString().trim();
+                full_name = etFullName.getText().toString().trim();
                 if (validateInputs())
                 {
                     registerUser();
@@ -95,7 +95,6 @@ public class RegisterActivity extends AppCompatActivity {
         pDialog.show();
 
     }
-
     /**
      * Launch Dashboard Activity on Successful Sign Up
      */
@@ -106,7 +105,6 @@ public class RegisterActivity extends AppCompatActivity {
         finish();
 
     }
-
     private void registerUser()
     {
         displayLoader();
@@ -115,7 +113,7 @@ public class RegisterActivity extends AppCompatActivity {
             //Populate the request parameters
             request.put(KEY_USERNAME, username);
             request.put(KEY_PASSWORD, password);
-            request.put(KEY_FULL_NAME, fullName);
+            request.put(KEY_FULL_NAME, full_name);
 
         } catch (JSONException e)
         {
@@ -127,10 +125,11 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         pDialog.dismiss();
                         try {
+
                             //Check if user got registered successfully
                             if (response.getInt(KEY_STATUS) == 0) {
                                 //Set the user session
-                                session.loginUser(username,fullName);
+                                session.loginUser(username,full_name);
                                 loadDashboard();
 
                             }else if(response.getInt(KEY_STATUS) == 1)
@@ -142,7 +141,7 @@ public class RegisterActivity extends AppCompatActivity {
                             }else
                              {
                                 Toast.makeText(getApplicationContext(),
-                                        response.getString(KEY_MESSAGE), Toast.LENGTH_SHORT).show();
+                                        response.getString(KEY_MESSAGE), Toast.LENGTH_LONG).show();
 
                             }
                         } catch (JSONException e) {
@@ -157,7 +156,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                         //Display error message whenever an error occurs
                         Toast.makeText(getApplicationContext(),
-                                error.getMessage(), Toast.LENGTH_SHORT).show();
+                                error.getMessage(), Toast.LENGTH_LONG).show();
 
                     }
                 });
@@ -171,7 +170,7 @@ public class RegisterActivity extends AppCompatActivity {
      * Validates inputs and shows error if any
      */
     private boolean validateInputs() {
-        if (KEY_EMPTY.equals(fullName))
+        if (KEY_EMPTY.equals(full_name))
         {
             etFullName.setError("Full Name cannot be empty");
             etFullName.requestFocus();

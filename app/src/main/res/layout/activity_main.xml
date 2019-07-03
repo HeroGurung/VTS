@@ -15,6 +15,4 @@
         android:textAlignment="center"
         android:id="@+id/welcomeUser"/>
 
-
-
 </LinearLayout>

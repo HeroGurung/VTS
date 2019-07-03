@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity
     private String username;
     private String password;
     private ProgressDialog pDialog;
-    public String login_url = "http://192.168.1.16/project/member/db/login.php";
+    public String login_url = "http://192.168.1.79/project/member/db/login.php";
     private SessionHandler session;
 
     @Override
@@ -116,21 +116,26 @@ public class LoginActivity extends AppCompatActivity
             e.printStackTrace();
         }
         JsonObjectRequest jsArrayRequest = new JsonObjectRequest
-                (Request.Method.POST, login_url, request, new Response.Listener<JSONObject>() {
+                (Request.Method.POST, login_url, request, new Response.Listener<JSONObject>()
+                {
                     @Override
-                    public void onResponse(JSONObject response) {
+                    public void onResponse(JSONObject response)
+                    {
                         pDialog.dismiss();
                         try {
                             //Check if user got logged in successfully
-                            if (response.getInt(KEY_STATUS) == 0) {
+                            if (response.getInt(KEY_STATUS) == 0)
+                            {
                                 session.loginUser(username,response.getString(KEY_FULL_NAME));
                                 loadDashboard();
 
-                            }else{
+                            }else
+                                {
+
                                 Toast.makeText(getApplicationContext(),
                                         response.getString(KEY_MESSAGE), Toast.LENGTH_SHORT).show();
 
-                            }
+                                }
                         } catch (JSONException e)
                         {
                             e.printStackTrace();
@@ -143,6 +148,7 @@ public class LoginActivity extends AppCompatActivity
                         pDialog.dismiss();
 
                         //Display error message whenever an error occurs
+
                         Toast.makeText(getApplicationContext(),
                                 error.getMessage(), Toast.LENGTH_SHORT).show();
 
