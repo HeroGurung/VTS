@@ -6,7 +6,7 @@
     <string name="logo">Logo</string>
     <string name="VTS">Virtual Training Services</string>
 
-<!--naya login -->
+    <!--naya login -->
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
@@ -18,4 +18,5 @@
     <string name="not_having_account">Not Having an Account?</string>
     <string name="sign_up">Sign Up</string>
     <string name="logout">Logout</string>
+
 </resources>
