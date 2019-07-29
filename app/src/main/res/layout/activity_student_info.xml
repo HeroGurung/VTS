@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.sss.vts.Admin.Home_Activity.StudentInfoActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <io.github.yavski.fabspeeddial.FabSpeedDial
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:fabGravity="bottom_end"
+            app:fabMenu="@menu/fab_menu"
+            app:miniFabBackgroundTint="#ffffff"
+            app:miniFabDrawableTint="@color/colorPrimary"
+            app:miniFabTitleTextColor="@color/colorPrimary">
+
+        </io.github.yavski.fabspeeddial.FabSpeedDial>
+    </FrameLayout>
+
+</LinearLayout>

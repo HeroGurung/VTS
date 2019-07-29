@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorSplashStart">#6633ba43</color>
-    <color name="colorSplashEnd">#6692c755</color>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="standardGreen">#0A4322</color>
-    <color name="standardRed">#C00000</color>
-    <color name="black">#000000</color>
-    <color name="colorEditTextBg">#8845b23e</color>
-    <color name="btnStartColor">#04743a</color>
-    <color name="btnEndColor">#06582c</color>
+    <color name="colorPrimary">#0a4322</color>
+    <color name="colorPrimaryDark">#0a4322</color>
+    <color name="colorAccent">#0a4322</color>
+    <color name="standardRed">#c00000</color>
+    <color name="standardGreen">#0a4322</color>
+    <color name="ripple_effect">#CACACA  </color>
 </resources>

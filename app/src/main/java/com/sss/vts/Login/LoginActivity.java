@@ -42,18 +42,16 @@ public class LoginActivity extends AppCompatActivity {
 
     SessionManager sessionManager;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
         //Getting the instance of Spinner and applying OnItemSelectedListener on it
         Spinner spinner = findViewById(R.id.spinner_userType);
 
         //Creating the ArrayAdapter instance having the country list
-        ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,userType);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,userType);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -262,5 +260,4 @@ public class LoginActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
-
 }

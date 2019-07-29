@@ -10,21 +10,46 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/khukri"
         android:supportsRtl="true"
-        android:theme="@style/AppThemeRegister">
-        <activity android:name=".User.UserActivity" />
+        android:theme="@style/AppTheme">
+        <activity android:name=".Admin.Home_Activity.StudentInfoActivity"
+            android:parentActivityName=".Admin.AdminActivity"></activity>
         <activity
-            android:name=".Login.LoginActivity"
-            android:theme="@style/AppThemeLogin">
+            android:name=".Admin.Home_Activity.TrainingActivity"
+            android:parentActivityName=".Admin.AdminActivity" />
+        <activity
+            android:name=".Admin.Home_Activity.RoutineActivity"
+            android:parentActivityName=".Admin.AdminActivity" />
+        <activity
+            android:name=".Admin.Home_Activity.InformationActivity"
+            android:parentActivityName=".Admin.AdminActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Admin.Home_Activity.AssignmentsActivity"
+            android:parentActivityName=".Admin.AdminActivity" />
+        <activity
+            android:name=".Admin.Home_Activity.DownloadsActivity"
+            android:parentActivityName=".Admin.AdminActivity" />
+        <activity
+            android:name=".Admin.Home_Activity.EventActivity"
+            android:parentActivityName=".Admin.AdminActivity" />
+        <activity
+            android:name=".Login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Admin.AdminActivity" />
+        <activity
+            android:name=".User.UserActivity"
+            android:theme="@style/AppTheme.NoActionBarNavigation" />
+        <activity android:name=".Admin.AdminActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".User.RegisterActivity"
-            android:theme="@style/AppThemeRegister" />
+            android:parentActivityName=".Admin.Home_Activity.StudentInfoActivity"/>
+        <activity android:name=".Admin.AdminRegister"
+            android:parentActivityName=".Admin.Home_Activity.StudentInfoActivity"/>
     </application>
 
 </manifest>

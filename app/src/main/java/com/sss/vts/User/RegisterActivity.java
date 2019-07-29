@@ -35,13 +35,15 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        getSupportActionBar().setTitle("User Register");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 //        loading = findViewById(R.id.loading);
         name = findViewById(R.id.name);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         c_password = findViewById(R.id.c_password);
         btn_register = findViewById(R.id.btn_register);
-
 
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
