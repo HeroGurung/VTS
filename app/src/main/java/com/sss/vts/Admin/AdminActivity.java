@@ -49,7 +49,8 @@ public class AdminActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TrainingActivity.class);
         startActivity(intent);
     }
-    public void studentInfoClick (View v) {
+    public void studentInfoClick (View v)
+    {
         Intent intent = new Intent(this, StudentInfoActivity.class);
         startActivity(intent);
     }

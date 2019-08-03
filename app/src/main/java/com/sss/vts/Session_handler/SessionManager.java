@@ -16,7 +16,6 @@ public class SessionManager {
     public Context context;
     int PRIVATE_MODE = 0;
 
-
     public static final String PREF_NAME = "LOGIN";
     public static final String LOGIN = "IS_LOGIN";
     public static final String NAME = "NAME";

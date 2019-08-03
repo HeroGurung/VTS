@@ -32,8 +32,8 @@
         <activity
             android:name=".Admin.Home_Activity.EventActivity"
             android:parentActivityName=".Admin.AdminActivity" />
-        <activity
-            android:name=".Login.LoginActivity">
+        <activity  android:name=".Login.LoginActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,15 +41,18 @@
             </intent-filter>
         </activity>
         <activity
+
             android:name=".User.UserActivity"
-            android:theme="@style/AppTheme.NoActionBarNavigation" />
+            android:theme="@style/AppTheme.NoActionBarNavigation"
+             />
+
         <activity android:name=".Admin.AdminActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".User.RegisterActivity"
             android:parentActivityName=".Admin.Home_Activity.StudentInfoActivity"/>
         <activity android:name=".Admin.AdminRegister"
-            android:parentActivityName=".Admin.Home_Activity.StudentInfoActivity"/>
+            android:parentActivityName=".Admin$Home_Activity.StudentInfoActivity"/>
     </application>
 
 </manifest>
